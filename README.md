@@ -2,6 +2,8 @@
 
 A local, privacy-first OCR app built with [EasyOCR](https://github.com/JaidedAI/EasyOCR) and [Streamlit](https://streamlit.io) — extract text from images entirely on your machine, no cloud, no API keys.
 
+![Image Text Identifier demo](OCR.gif)
+
 ---
 
 ## Features
