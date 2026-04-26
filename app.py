@@ -10,7 +10,7 @@ from trainer import OCRCorrectionModel, align_words, save_model, load_model, PIC
 SAMPLE_DIR = Path(__file__).parent / "ocr"
 
 st.set_page_config(page_title="Local OCR", layout="wide")
-st.title("Local Image Text Identifier")
+st.title("Local OCR with Correction Model")
 
 # --- Sidebar controls ---
 with st.sidebar:
