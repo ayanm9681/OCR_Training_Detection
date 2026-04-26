@@ -1,0 +1,38 @@
+# Git
+.git/
+.gitignore
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Trained models (mount at runtime instead)
+*.pkl
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Streamlit local config
+.streamlit/
+
+# EasyOCR local model cache
+.EasyOCR/
+
+# Docs / media
+*.md
+*.gif
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env files
+.env
+.env.*

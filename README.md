@@ -29,6 +29,8 @@ Image_Text_Identifier/
 ├── preprocess.py       # OpenCV preprocessing — denoise, deskew, sharpen
 ├── trainer.py          # OCRCorrectionModel — fit, predict, save/load pickle
 ├── requirements.txt
+├── Dockerfile
+├── .dockerignore
 └── ocr/                # Bundled sample images
     ├── image1.png
     ├── image2.png
@@ -37,7 +39,7 @@ Image_Text_Identifier/
 
 ---
 
-## Quick Start
+## Quick Start (local)
 
 ```bash
 pip install -r requirements.txt
@@ -45,6 +47,26 @@ streamlit run app.py
 ```
 
 Open http://localhost:8501 in your browser.
+
+## Quick Start (Docker)
+
+```bash
+# Build
+docker build -t image-text-identifier .
+
+# Run
+docker run -p 8501:8501 image-text-identifier
+```
+
+Open http://localhost:8501 in your browser.
+
+To persist your trained correction model across container restarts, mount the pickle file:
+
+```bash
+docker run -p 8501:8501 \
+  -v $(pwd)/ocr_model.pkl:/app/ocr_model.pkl \
+  image-text-identifier
+```
 
 ---
 
